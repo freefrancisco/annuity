@@ -3,10 +3,10 @@ import Annuity (numberOfPayments, futureValue)
 
 quotesFromSite :: IO [(Integer, Float)]
 quotesFromSite = do
-  runs <- readFile "data/immediateannuitiesquotes.txt"
+  quotesString <- readFile "data/immediateannuitiesquotes.txt"
   let
     readLine line = (read i :: Integer, read j :: Float) where [i,j] = words line
-  return $ map readLine (lines runs)
+  return $ map readLine (lines quotesString)
 
 processQuote :: Float -> Integer -> Float -> IO ()
 processQuote principal years quotePerMonth = do
@@ -33,5 +33,5 @@ main = do
     principal = 100000
     f (year, quotePerMonth) = processQuote principal year quotePerMonth
   putStrLn $ "Running immediateannuities.com with principal = " ++ show principal
-  yearsAndQuotes <- quotesFromSite
-  mapM_ f yearsAndQuotes
+  quotes <- quotesFromSite
+  mapM_ f quotes
