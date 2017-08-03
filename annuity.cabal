@@ -8,7 +8,7 @@ license-file:        LICENSE
 author:              Francisco Gutierrez
 maintainer:          freefrancisco@gmail.com
 copyright:           Copyright: (c) 2017 Francisco Gutierrez
-category:            None, Other, Utils, Data Science, AI, Algorithms, Machine Learning, Deep Learning, Natural Language Processing
+category:            Finance, Utils
 build-type:          Simple
 cabal-version:       >=1.10
 extra-source-files:  README.md

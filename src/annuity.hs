@@ -1,9 +1,4 @@
-module Annuity
--- (presentValue
--- , futureValue
--- , perpetuity
--- )
-where
+module Annuity where
 
 -- future value of one dollar
 futureValue :: (Num a, Integral b) => a -> b -> a
